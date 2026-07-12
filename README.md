@@ -1,14 +1,12 @@
-# TA6 — Aplicación Web con Python y Flask
+# EVA3 — Aplicación Web con Python y Flask.
 
-Aplicación web desarrollada con **Python + Flask** como parte del Taller Aplicado 6.
+Aplicación web desarrollada con **Python + Flask**.
 Cuenta con un menú principal desde el que se accede a dos ejercicios, cada uno resuelto
 mediante un formulario que envía datos al servidor y procesa el resultado con Python.
 
 \---
 
-## Funcionalidades
-
-### Ejercicio 1 — Promedio y asistencia
+### Ejercicio 1 — Promedio y asistencia.
 
 Formulario que recibe **3 notas** (rango 10 a 70) y un **porcentaje de asistencia**
 (rango 0 a 100). Al enviar, la aplicación calcula el promedio de las notas y determina
@@ -21,20 +19,20 @@ Se considera **APROBADO** únicamente si se cumplen **ambas** condiciones:
 
 En cualquier otro caso, el resultado es **REPROBADO**.
 
-### Ejercicio 2 — Nombre más largo
+### Ejercicio 2 — Nombre más largo.
 
 Formulario que recibe **3 nombres distintos**. Al enviar, la aplicación identifica cuál
 de ellos tiene la mayor cantidad de caracteres y muestra ese nombre junto al total de
 caracteres que lo componen.
 
-### Historial en memoria
+### Historial en memoria.
 
 Cada resultado calculado se almacena en una lista en memoria durante la ejecución del
 servidor, y puede consultarse desde la ruta `/historial`.
 
 \---
 
-## Estructura del proyecto
+## Estructura.
 
 ```
 .
@@ -55,7 +53,7 @@ servidor, y puede consultarse desde la ruta `/historial`.
 
 \---
 
-## Rutas de la aplicación
+## Rutas.
 
 |Ruta|Método|Descripción|
 |-|-|-|
@@ -67,9 +65,7 @@ servidor, y puede consultarse desde la ruta `/historial`.
 
 \---
 
-## Instalación y ejecución
-
-Requiere **Python 3** instalado.
+## Instalación y ejecución.
 
 ```bash
 # 1. Clonar el repositorio
@@ -78,7 +74,7 @@ cd Evaluacion-Flask
 
 # 2. Crear y activar el entorno virtual
 py -m venv venv
-venv\\Scripts\\activate        # Windows
+venv\\Scripts\\activate      # Windows
 # source venv/bin/activate   # macOS / Linux
 
 # 3. Instalar las dependencias con pip
@@ -90,11 +86,9 @@ py main.py
 
 La aplicación queda disponible en **http://127.0.0.1:5000**
 
-Para detener el servidor: `Ctrl + C`
-
 \---
 
-## Tecnologías utilizadas
+## Tecnologías utilizadas.
 
 * **Python 3**
 * **Flask** — framework web
@@ -105,7 +99,7 @@ Para detener el servidor: `Ctrl + C`
 
 \---
 
-## Casos de prueba
+## Casos de prueba.
 
 |Ejercicio|Entrada|Resultado esperado|
 |-|-|-|
