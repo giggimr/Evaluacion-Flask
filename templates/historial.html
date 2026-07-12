@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block titulo %}Historial{% endblock %}
+
+{% block contenido %}
+<div class="tarjeta">
+    <h2>Registros almacenados en memoria</h2>
+
+    {% if historial %}
+    <table>
+        <tr><th>#</th><th>Ejercicio</th><th>Detalle</th></tr>
+        {% for r in historial %}
+        <tr>
+            <td>{{ r.id }}</td>
+            <td>{{ r.tipo }}</td>
+            <td>{{ r.detalle }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <p>Todavía no hay registros.</p>
+    {% endif %}
+
+    <a class="volver" href="{{ url_for('index') }}">Volver al menú</a>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block titulo %}Menú Principal{% endblock %}
+
+{% block contenido %}
+<div class="tarjeta">
+    <h2>Menú Principal</h2>
+    <p>Selecciona el ejercicio que deseas ejecutar.</p>
+
+    <div class="botonera">
+        <a class="boton" href="{{ url_for('ejercicio', numero=1) }}">Ejercicio 1</a>
+        <a class="boton" href="{{ url_for('ejercicio', numero=2) }}">Ejercicio 2</a>
+    </div>
+
+    <p class="nota">
+        Registros almacenados en memoria: {{ total_registros }} —
+        <a href="{{ url_for('ver_historial') }}">ver historial</a>
+    </p>
+</div>
+{% endblock %}

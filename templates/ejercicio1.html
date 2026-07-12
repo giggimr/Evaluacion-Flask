@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block titulo %}Ejercicio 1{% endblock %}
+
+{% block contenido %}
+<div class="tarjeta">
+    <h2>Ejercicio 1: Promedio y Asistencia</h2>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST" action="{{ url_for('ejercicio1') }}">
+        <label for="nota1">Nota 1 (10 - 70)</label>
+        <input type="number" step="1" min="10" max="70" id="nota1" name="nota1" required>
+
+        <label for="nota2">Nota 2 (10 - 70)</label>
+        <input type="number" step="1" min="10" max="70" id="nota2" name="nota2" required>
+
+        <label for="nota3">Nota 3 (10 - 70)</label>
+        <input type="number" step="1" min="10" max="70" id="nota3" name="nota3" required>
+
+        <label for="asistencia">Asistencia % (0 - 100)</label>
+        <input type="number" step="1" min="0" max="100" id="asistencia" name="asistencia" required>
+
+        <button type="submit" class="boton">Enviar</button>
+    </form>
+
+    <a class="volver" href="{{ url_for('index') }}">Volver al menú</a>
+</div>
+{% endblock %}

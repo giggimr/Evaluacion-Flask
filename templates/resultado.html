@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block titulo %}{{ titulo }}{% endblock %}
+
+{% block contenido %}
+<div class="tarjeta">
+    <h2>{{ titulo }}</h2>
+
+    {% for linea in lineas %}
+        <p>{{ linea }}</p>
+    {% endfor %}
+
+    <p class="destacado {% if aprobado %}ok{% else %}malo{% endif %}">{{ destacado }}</p>
+
+    <a class="volver" href="{{ url_for('index') }}">Volver al menú</a>
+</div>
+{% endblock %}
